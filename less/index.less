@@ -2,6 +2,7 @@
 @text-color: #151e3f;
 @heading-color: #19323c;
 @link-color: #030027;
+@icon-color: #e54b4b;
 
 .flex-center() {
   display: flex;
@@ -13,7 +14,7 @@
   margin: 0;
   padding: 0;
   max-width: 100%;
-  border: 1px solid gray;
+  // border: 1px solid gray;
 }
 
 html {
@@ -30,16 +31,15 @@ h6 {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 4rem;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 body {
   color: @text-color;
-  // background-color: @background-color;
 }
 
 .container {
@@ -47,12 +47,13 @@ body {
   margin: 1% auto;
 }
 
+// *********** HEADER STYLES **************
 header {
   .flex-center();
 
   .nav-links {
     display: flex;
-    width: 100%;
+    width: 85%;
     justify-content: space-evenly;
     font-size: 1.6rem;
     padding: 2% 0;
@@ -71,13 +72,22 @@ header {
   }
 }
 
+// *********** HERO SECTION STYLES **************
 .hero-section {
   .flex-center();
   justify-content: space-between;
+  text-align: center;
+  height: 80vh;
 
   .hero-image-container {
     width: 60%;
     padding: 2%;
+    .flex-center();
+    align-items: center;
+
+    h1 {
+      font-size: 3rem;
+    }
 
     img {
       border-radius: 50%;
@@ -102,7 +112,134 @@ header {
 
       &:hover {
         background-color: lighten(@text-color, 20%);
+        cursor: pointer;
       }
     }
+  }
+}
+
+// *********** ABOUT SECTION STYLES **************
+.about-section {
+  .flex-center();
+  height: 45vh;
+  align-items: center;
+
+  .text-container {
+    width: 50%;
+    justify-content: space-between;
+    padding: 2%;
+
+    h2 {
+      text-align: center;
+    }
+
+    p {
+      font-size: 2rem;
+      padding: 2%;
+    }
+
+    .icon-wrapper {
+      .flex-center();
+      flex-flow: row wrap;
+      justify-content: space-evenly;
+      padding: 2% 0;
+
+      .color-icons {
+        color: @icon-color;
+      }
+    }
+
+    .btn-container {
+      .flex-center();
+      padding: 2%;
+      justify-content: space-evenly;
+
+      button {
+        padding: 5% 2%;
+        justify-content: space-between;
+        width: 40%;
+        font-size: 1.8rem;
+        background-color: @text-color;
+        color: #fff;
+        border-radius: 1rem;
+
+        &:hover {
+          background-color: lighten(@text-color, 20%);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+// *********** CONTACT SECTION STYLES **************
+.contact-section {
+  .flex-center;
+  font-size: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .text-container {
+    width: 50%;
+    justify-content: space-between;
+    padding: 2%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .form-container {
+    .flex-center();
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    label {
+      padding: 1.2% 0;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 50%;
+      resize: vertical;
+      padding: 1%;
+    }
+
+    textarea {
+      min-height: 20vh;
+    }
+
+    .btn-container {
+      width: 20%;
+      margin-top: 2%;
+
+      button {
+        padding: 5% 2%;
+        justify-content: space-between;
+        width: 100%;
+        font-size: 1.8rem;
+        background-color: @text-color;
+        color: #fff;
+        border-radius: 1rem;
+
+        &:hover {
+          background-color: lighten(@text-color, 20%);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+// *********** CONTACT SECTION STYLES **************
+footer {
+  .flex-center();
+
+  .text-container {
+    font-size: 1.6rem;
+    padding: 3%;
   }
 }
