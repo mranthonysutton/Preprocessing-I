@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'Chilanka';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Chilanka Regular'), local('Chilanka-Regular'), url(https://fonts.gstatic.com/s/chilanka/v5/WWXRlj2DZQiMJYaYRoJXKdU.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Manjari';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Manjari Regular'), local('Manjari-Regular'), url(https://fonts.gstatic.com/s/manjari/v2/k3kQo8UPMOBO2w1UfdnoKw.ttf) format('truetype');
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,6 +21,9 @@
 html {
   font-size: 62.5%;
 }
+body {
+  font-family: "Manjari", sans-serif;
+}
 h1,
 h2,
 h3,
@@ -14,6 +31,7 @@ h4,
 h5,
 h6 {
   color: #19323c;
+  font-family: "Chilanka", cursive;
 }
 h1 {
   font-size: 4rem;
@@ -56,12 +74,26 @@ header .nav-links a:hover {
   text-align: center;
   height: 80vh;
 }
+@media screen and (max-width: 800px) {
+  .hero-section {
+    flex-direction: column;
+    margin: 3% 0;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+}
 .hero-section .hero-image-container {
   width: 60%;
   padding: 2%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media screen and (max-width: 800px) {
+  .hero-section .hero-image-container {
+    width: 90%;
+  }
 }
 .hero-section .hero-image-container h1 {
   font-size: 3rem;
@@ -77,6 +109,14 @@ header .nav-links a:hover {
   justify-content: center;
   flex-direction: column;
   justify-content: space-evenly;
+}
+@media screen and (max-width: 800px) {
+  .hero-section .text-container {
+    width: 90%;
+  }
+  .hero-section .text-container h2 {
+    padding: 2% 0;
+  }
 }
 .hero-section .text-container button {
   padding: 5% 2%;
@@ -96,10 +136,23 @@ header .nav-links a:hover {
   height: 45vh;
   align-items: center;
 }
+@media screen and (max-width: 800px) {
+  .about-section {
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: auto;
+  }
+}
 .about-section .text-container {
   width: 50%;
   justify-content: space-between;
   padding: 2%;
+}
+@media screen and (max-width: 800px) {
+  .about-section .text-container {
+    width: 90%;
+    padding: 2% 0;
+  }
 }
 .about-section .text-container h2 {
   text-align: center;
@@ -121,19 +174,19 @@ header .nav-links a:hover {
 .about-section .text-container .btn-container {
   display: flex;
   justify-content: center;
-  padding: 2%;
-  justify-content: space-evenly;
+  width: 100%;
+  flex-direction: column;
 }
-.about-section .text-container .btn-container button {
+.about-section .text-container .btn-container a button {
   padding: 5% 2%;
   justify-content: space-between;
-  width: 40%;
   font-size: 1.8rem;
   background-color: #151e3f;
   color: #fff;
   border-radius: 1rem;
+  width: 100%;
 }
-.about-section .text-container .btn-container button:hover {
+.about-section .text-container .btn-container a button:hover {
   background-color: #2f428c;
   cursor: pointer;
 }
@@ -144,6 +197,11 @@ header .nav-links a:hover {
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width: 800px) {
+  .contact-section {
+    margin-top: 2%;
+  }
+}
 .contact-section .text-container {
   width: 50%;
   justify-content: space-between;
@@ -151,6 +209,11 @@ header .nav-links a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+@media screen and (max-width: 800px) {
+  .contact-section .text-container {
+    width: 90%;
+  }
 }
 .contact-section .form-container {
   display: flex;
@@ -169,17 +232,31 @@ header .nav-links a:hover {
   resize: vertical;
   padding: 1%;
 }
+@media screen and (max-width: 800px) {
+  .contact-section .form-container input[type="text"],
+  .contact-section .form-container input[type="email"],
+  .contact-section .form-container textarea {
+    width: 90%;
+  }
+}
 .contact-section .form-container textarea {
   min-height: 20vh;
 }
+@media screen and (max-width: 800px) {
+  .contact-section .form-container textarea {
+    min-height: auto;
+  }
+}
 .contact-section .form-container .btn-container {
-  width: 20%;
-  margin-top: 2%;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 2%;
 }
 .contact-section .form-container .btn-container button {
-  padding: 5% 2%;
+  padding: 2%;
   justify-content: space-between;
-  width: 100%;
   font-size: 1.8rem;
   background-color: #151e3f;
   color: #fff;
@@ -191,9 +268,12 @@ header .nav-links a:hover {
 }
 footer {
   display: flex;
+  align-items: center;
   justify-content: center;
+  text-align: center;
 }
 footer .text-container {
   font-size: 1.6rem;
   padding: 3%;
+  width: 100%;
 }
