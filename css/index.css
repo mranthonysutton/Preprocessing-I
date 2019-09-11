@@ -1,136 +1,84 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  border: 1px solid gray;
+}
+html {
+  font-size: 62.5%;
+}
 h1,
 h2,
 h3,
 h4,
 h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+h6 {
+  color: #19323c;
 }
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2rem;
 }
 body {
-  line-height: 1;
+  color: #151e3f;
 }
-ol,
-ul {
-  list-style: none;
+.container {
+  width: 80%;
+  margin: 1% auto;
 }
-blockquote,
-q {
-  quotes: none;
+header {
+  display: flex;
+  justify-content: center;
 }
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
+header .nav-links {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  font-size: 1.6rem;
+  padding: 2% 0;
 }
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+header .nav-links a {
+  color: #030027;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 2%;
 }
-/* Set every element's box-sizing to border-box */
-* {
-  box-sizing: border-box;
+header .nav-links a:hover {
+  color: #07005a;
+  border-bottom: 0.2rem solid #07005a;
 }
-html,
-body {
-  height: 100%;
+.hero-section {
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+}
+.hero-section .hero-image-container {
+  width: 60%;
+  padding: 2%;
+}
+.hero-section .hero-image-container img {
+  border-radius: 50%;
+  align-items: center;
+}
+.hero-section .text-container {
+  width: 40%;
+  padding: 0 2%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.hero-section .text-container button {
+  padding: 5% 2%;
+  width: 100%;
+  font-size: 1.8rem;
+  background-color: #151e3f;
+  color: #fff;
+  border-radius: 1rem;
+}
+.hero-section .text-container button:hover {
+  background-color: #2f428c;
 }
