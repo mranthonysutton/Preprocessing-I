@@ -1,59 +1,309 @@
-// Is this working?
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+@import url("https://fonts.googleapis.com/css?family=Chilanka|Manjari&display=swap");
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+@background-color: #f3f7f0;
+@text-color: #151e3f;
+@heading-color: #19323c;
+@link-color: #030027;
+@icon-color: #e54b4b;
+@tablet-screen: 800px;
+
+@body-font: "Manjari", sans-serif;
+@header-font: "Chilanka", cursive;
+
+.flex-center() {
+  display: flex;
+  justify-content: center;
 }
 
-/* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  // border: 1px solid gray;
 }
 
-html, body {
-    height: 100%;
+html {
+  font-size: 62.5%;
 }
 
+body {
+  font-family: @body-font;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: @heading-color;
+  font-family: @header-font;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+body {
+  color: @text-color;
+}
+
+.container {
+  width: 80%;
+  margin: 1% auto;
+}
+
+// *********** HEADER STYLES **************
+header {
+  .flex-center();
+
+  .nav-links {
+    display: flex;
+    width: 85%;
+    justify-content: space-evenly;
+    font-size: 1.6rem;
+    padding: 2% 0;
+
+    a {
+      color: @link-color;
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 2%;
+
+      &:hover {
+        color: (lighten(@link-color, 10%));
+        border-bottom: 0.2rem solid lighten(@link-color, 10%);
+      }
+    }
+  }
+}
+
+// *********** HERO SECTION STYLES **************
+.hero-section {
+  .flex-center();
+  justify-content: space-between;
+  text-align: center;
+  height: 80vh;
+
+  @media screen and (max-width: @tablet-screen) {
+    flex-direction: column;
+    margin: 3% 0;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+
+  .hero-image-container {
+    width: 60%;
+    padding: 2%;
+    .flex-center();
+    align-items: center;
+
+    @media screen and (max-width: @tablet-screen) {
+      width: 90%;
+    }
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    img {
+      border-radius: 50%;
+      align-items: center;
+    }
+  }
+
+  .text-container {
+    width: 40%;
+    padding: 0 2%;
+    .flex-center();
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    @media screen and (max-width: @tablet-screen) {
+      width: 90%;
+
+      h2 {
+        padding: 2% 0;
+      }
+    }
+
+    button {
+      padding: 5% 2%;
+      width: 100%;
+      font-size: 1.8rem;
+      background-color: @text-color;
+      color: #fff;
+      border-radius: 1rem;
+
+      &:hover {
+        background-color: lighten(@text-color, 20%);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+// *********** ABOUT SECTION STYLES **************
+.about-section {
+  .flex-center();
+  height: 45vh;
+  align-items: center;
+
+  @media screen and (max-width: @tablet-screen) {
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: auto;
+  }
+
+  .text-container {
+    width: 50%;
+    justify-content: space-between;
+    padding: 2%;
+
+    @media screen and (max-width: @tablet-screen) {
+      width: 90%;
+      padding: 2% 0;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    p {
+      font-size: 2rem;
+      padding: 2%;
+    }
+
+    .icon-wrapper {
+      .flex-center();
+      flex-flow: row wrap;
+      justify-content: space-evenly;
+      padding: 2% 0;
+
+      .color-icons {
+        color: @icon-color;
+      }
+    }
+
+    .btn-container {
+      .flex-center();
+      width: 100%;
+      flex-direction: column;
+
+      a button {
+        padding: 5% 2%;
+        justify-content: space-between;
+        font-size: 1.8rem;
+        background-color: @text-color;
+        color: #fff;
+        border-radius: 1rem;
+        width: 100%;
+
+        &:hover {
+          background-color: lighten(@text-color, 20%);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+// *********** CONTACT SECTION STYLES **************
+.contact-section {
+  .flex-center;
+  font-size: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (max-width: @tablet-screen) {
+    margin-top: 2%;
+  }
+
+  .text-container {
+    width: 50%;
+    justify-content: space-between;
+    padding: 2%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (max-width: @tablet-screen) {
+      width: 90%;
+    }
+  }
+
+  .form-container {
+    .flex-center();
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    label {
+      padding: 1.2% 0;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 50%;
+      resize: vertical;
+      padding: 1%;
+
+      @media screen and (max-width: @tablet-screen) {
+        width: 90%;
+      }
+    }
+
+    textarea {
+      min-height: 20vh;
+
+      @media screen and (max-width: @tablet-screen) {
+        min-height: auto;
+      }
+    }
+
+    .btn-container {
+      .flex-center();
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      margin: 2%;
+
+      button {
+        padding: 2%;
+        justify-content: space-between;
+        font-size: 1.8rem;
+        background-color: @text-color;
+        color: #fff;
+        border-radius: 1rem;
+
+        &:hover {
+          background-color: lighten(@text-color, 20%);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+// *********** CONTACT SECTION STYLES **************
+footer {
+  .flex-center();
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  .text-container {
+    font-size: 1.6rem;
+    padding: 3%;
+    width: 100%;
+  }
+}

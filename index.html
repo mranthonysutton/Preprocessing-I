@@ -1,19 +1,119 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Anthony Sutton | Resume</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+      integrity="sha256-zmfNZmXoNWBMemUOo1XUGFfc0ihGGLYdgtJS3KCr/l0="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/index.css" />
 
-  <title>My Resume</title>
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+  </head>
 
-  <link rel="stylesheet" href="css/index.css">
+  <body>
+    <div id="home" class="container">
+      <header>
+        <nav class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a
+            href="https://mranthonysutton.github.io/portfolio-website/"
+            target=""
+            >Portfolio</a
+          >
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
 
-  <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-  <![endif]-->
-</head>
+      <section class="hero-section">
+        <div class="hero-image-container">
+          <img src="images/hero_image.jpg" alt="Hero Image" />
+        </div>
 
-<body>
-  <h1>My Resume</h1>
-</body>
+        <div class="text-container">
+          <h1>Anthony Sutton</h1>
+          <h2>
+            Full-Stack Web Developer that is looking to turn your ideas into
+            reality!
+          </h2>
+          <a href="https://github.com/mranthonysutton" target="_blank"
+            ><button>View My Work</button></a
+          >
+        </div>
+      </section>
+
+      <section id="about" class="about-section">
+        <div class="text-container">
+          <h2>About Me</h2>
+          <p>
+            I am a full-stack web developer currently living in Las Vegas, NV. I
+            like to take on new, challenging projects that push my skill set to
+            the next level. I have strong knowledge of HTML, CSS, LESS, Python,
+            Javascript. I utulize all of these differnet languages together to
+            build custom projects.
+          </p>
+        </div>
+        <div class="text-container">
+          <h2>My Skills</h2>
+
+          <div class="icon-wrapper">
+            <i class="fab fa-html5 fa-5x color-icons"></i>
+
+            <i class="fab fa-css3 fa-5x color-icons"></i>
+
+            <i class="fab fa-js fa-5x color-icons"></i>
+
+            <i class="fab fa-less fa-5x color-icons"></i>
+
+            <i class="fab fa-python fa-5x color-icons"></i>
+          </div>
+
+          <div class="btn-container">
+            <a href="https://github.com/mranthonysutton" target="_blank"
+              ><button>View My Work</button></a
+            >
+            <a
+              href="https://mranthonysutton.github.io/portfolio-website/"
+              target="_blank"
+              ><button>Portfolio</button></a
+            >
+          </div>
+        </div>
+      </section>
+
+      <div id="contact" class="contact-section">
+        <div class="text-container">
+          <h3>Contact Me</h3>
+          <p>Fill out the form below to get in touch with me.</p>
+        </div>
+
+        <div class="form-container">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" />
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" />
+          <label for="message">Message</label>
+          <textarea name="message" id="message" rows="4"></textarea>
+          <div class="btn-container">
+            <button>Send Message</button>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="text-container">
+          <p>Copyright &copy; 2019. Anthony Sutton</p>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>
